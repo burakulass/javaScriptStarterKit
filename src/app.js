@@ -22,3 +22,28 @@ for (let i=0 ;i<konutKredileri.length;i++){
  console.log("<li> "+konutKredileri[i] +" </li>")
 }
 console.log("</ul>")
+
+let student= {id:1 , name:"burak Ulas"}
+console.log(student)
+
+function save(ogrenci){
+    console.log("saved: "+ student.name)
+    }
+
+save();    
+
+// fonksiyonda sabit değişken genellikle son parametre olark tanımlanır,
+// ama aşağıdaki örnekteki gibi ilk olarak tanımlamak istiyorsak grade(undefined, student) 
+// şeklinde tanımlanması gerekir
+
+function grade(puan=86, ogrenci){
+ console.log(ogrenci.name + " : "+puan)
+}
+
+grade(undefined,student);
+
+let students= ["Burak Ulaş", "Abdullah durna","Hakan kocaarı", {city:"ankara"}]
+let students2=[students, "istanbul"]
+
+console.log(students2)
+
