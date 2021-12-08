@@ -3,6 +3,20 @@
 // rest spread destructure
 
 //REST
+            //... rest olarak adlandırlıyor
+function add(...numbers) {
+    let total=0
+    for (let i = 0; i< numbers.length; i++) {
+      total = total+ numbers[i];
+       
+    }
+    console.log(total)
+}
+add(20,53)
+add(20,53,15)
+
+
+
 
 let showProducts = function(id, ...products){
     console.log(id)
@@ -59,3 +73,38 @@ console.log(category.name)
 let {id1,name} = category  // 2. şekilde yapılışı
 console.log(id1)
 console.log(name)
+
+
+//js kampı 2. dersten desctructuring örneği
+
+// let [ icAnadolu, marmara, karadeniz, icAnadoluSehirleri, marmaraSehirleri, karadenizSehirleri] = [
+//     {name:"iç Anadolu",population:"20M"},
+//     {name:"Maramara",population:"30M"},
+//     {name:"Karadeniz",population:"10M"},
+//     [ ["Ankara","Eskişehir"],
+//       ["istanbul","tekirdağ"],
+//       ["Amasya","Samsun"]
+//     ]
+
+// ]
+
+// console.log(icAnadolu.name)
+// console.log(marmara.population)
+
+//console.log(icAnadoluSehirleri) // let den sonraki arrayimiz  
+                                //karadeniz, icAnadoluSehirleri, marmaraSehirleri, icAnadoluSehirleri
+                                // şeklinde [ ] siz olursa bize tüm sehirleri verir.
+let [ icAnadolu, marmara, karadeniz, [icAnadoluSehirleri, marmaraSehirleri, karadenizSehirleri] ] = [
+    {name:"iç Anadolu",population:"20M"},
+    {name:"Maramara",population:"30M"},
+    {name:"Karadeniz",population:"10M"},
+    [ ["Ankara","Eskişehir"],
+      ["istanbul","tekirdağ"],
+      ["Amasya","Samsun"]
+    ]
+                                        
+]
+
+console.log(icAnadoluSehirleri) // icAnadoluSehirleri nden önce [] yaptığımız için
+                                // istediğimiz çıktıları elde ederiz.
+console.log(karadenizSehirleri)
